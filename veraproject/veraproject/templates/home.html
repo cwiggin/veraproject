@@ -1,0 +1,224 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The VERA Project</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="http://theveraproject.org/css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://theveraproject.org/css/share_this.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="shortcut icon" href="http://theveraproject.org/favicon.ico" />
+<link rel="icon" href="http://theveraproject.org/favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+<div id="headerLeft"><a href="http://theveraproject.org/home/"><img src="http://theveraproject.org/images/logo.gif" alt="The VERA Project" width="658" height="90" border="0" /></a></div>
+<div id="headerRight">
+     <div id="topbar_search">
+<form method="post" action="http://theveraproject.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="19" />
+<input type="hidden" name="XID" value="a40c60aea17cc2c520d2d215039858afb0741f66" />
+<input type="hidden" name="RP" value="search&amp;#47;results" />
+<input type="hidden" name="NRP" value="" />
+<input type="hidden" name="RES" value="" />
+<input type="hidden" name="status" value="" />
+<input type="hidden" name="weblog" value="" />
+<input type="hidden" name="search_in" value="everywhere" />
+<input type="hidden" name="where" value="any" />
+<input type="hidden" name="show_future_entries" value="yes" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+   
+			<form class="top-search">
+				<input class="top-search" value="SEARCH" onBlur="if (this.value == ''){this.value = 'SEARCH'; this.style.color='#666666';}" onFocus="if (this.value == 'SEARCH') {this.value = ''; this.style.color='#666666';}" type="text" name="keywords" id="keywords" />
+				<input type="submit" class="search-submit" value="submit" /><br clear="all" />
+			</form>
+</form>
+    </div>
+
+</div>
+    <!--begin #nav-->
+                  <div id="nav">
+                    <ul id="buttons">
+                      <li id="button1"><a href="http://theveraproject.org/donate/">donate</a></li>
+                      <li id="button2"><a href="http://theveraproject.org/shows/">shows</a></li>
+                      <li id="button3"><a href="http://theveraproject.org/getinvolved/">get involved</a></li>
+                      <li id="button4"><a href="http://theveraproject.org/silkscreen/">silkscreen</a></li>
+                      <li id="button5"><a href="http://theveraproject.org/audioprogram/">audio program</a></li>
+                      <li id="button6"><a href="http://theveraproject.org/artgallery/">art gallery</a></li>
+                      <li id="button7"><a href="http://theveraproject.org/classes/">classes</a></li>
+                      <li id="button8"><a href="http://theveraproject.org/blog/">blog</a></li>
+                      <li id="button9"><a href="http://theveraproject.org/about/">about</a></li>
+                      <li id="button10"><a href="http://fnlsm.jwczq.servertrust.com/default.asp" target="_blank">store</a></li>
+                      <li id="button11"><a href="http://theveraproject.org/contact/">contact</a></li>
+                    </ul>
+                  </div>
+<!--/end/ #nav -->
+</div>
+<div id="HomeContent">
+<div><img src="http://theveraproject.org/images/media_home.jpg" alt="The Vera Project" id="HomeMedia" width="900" height="390" /></div>
+<div><img src="http://theveraproject.org/images/divider_horiz.gif" alt="divider" class="divHoriz" width="900" height="2" /></div>
+
+<div id="HomeLeftCol">
+<img src="http://theveraproject.org/images/title_upcomingShows.gif" alt="Upcoming Shows" class="HomeLeftTitle" width="144" height="12" />
+ <ul id="dates" class="dashed">
+
+  {% for show in shows %}
+      
+  <li><div class="event-date">
+   <div class="event-month">{{show.date|date:"M" }}</div>
+   <div class="event-day">{{show.date|date:"d" }}</div>														
+   <div class="event-info">{{show.name}}
+    <a href="{{show.ticketurl}}" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
+   </div>
+  </li>
+
+
+
+  {% endfor %}
+
+ </ul>
+</div>
+
+<div id="HomeMidCol">
+<div class="borders">
+<img src="http://theveraproject.org/images/title_veraProjectBlog.gif" alt="Vera Project Blog" id="blogrollTitle" width="149" height="12" />
+
+
+
+<div class="blogEntry">
+<div class="EntryTitle"><a href="http://theveraproject.org/blog/detail/a_huge_drink_for_the_kids_thank_you1/">A Huge &#8220;Drink for the Kids&#8221; Thank You!</a></div>
+<div class="EntryDate">07.02.2013</div><p>As our latest annual, weeklong fundraiser “A Drink For The Kids” comes to a close, we&#8217;d like to extend our thanks for the unwavering support we have received from the community and our donors. We had an amazing turnout and we couldn’t have done it without you! A special thanks to our host coordinator Liz Pfriem, you were instrumental in our success and we will miss you! Another special thanks to our wonderful designer, Rob Stanton! </p>
+
+<p>We wanted to share our gratitude from Oola Distillery and Ninkasi Brewery for making ADFTK possible, and for Jeana Harrington of OOLA and Josh Russell for all their help coordinating. They had the integral role of supplying the booze – because where would we be without that? Without your gracious donations, this event would not have been possible, so many, many thanks to you and your company’s contributions.</p>
+
+<p>Thank you to all the bars that kindly offered up their space to host ADFTK. It really goes to show how the community can come together and for that we are so very grateful. The bars we partnered with are truly some of Seattle’s greatest and each in turn offered a unique environment, which added to the diversity Vera cherishes. We love you Moe Bar, Tavern Law, Cha Cha Lounge, Pony, Neighbor Lady, Linda’s Tavern, Redwood, and Tin Hat! The booze ain’t no good without a place to drink it!</p>
+
+<p>In addition to the bars, thank you to our hosts who contributed their time and effort to spread the word and made sure everyone had a drink in hand. This event would not have been nearly as successful without your dedication to ADFTK and The Vera Project! Thank you: Jason Lajeunesse, Billy O’Neill, Jerry Chiang, Jeana Harrington, Amber Jimenez, David Price, Andrew Joslyn, Luke Gabrieli, Christen Greene, Sharlese Jul-anetia Metcalf, Sean Morrow, Beth Warshaw-Duncan, Jen Knight, Alix Kolar, Dustin Fujikawa, Scott Tiahrt Conrad, Jason Baxter, Bekah Zietz, Sarah Moody, Sasha Morgan, Derek Erdman (shout-out for those amazing placemats!), Frank Nieto, Emily Nokes, Kelly O, Jen Joyce, Kate Becker, James Keblas, Shannon Stewart, Billy “Tank” Thompson, Annie Holden, Ian Imhof, Lauren Daniels, Reed Juenger, Tom Eddy, Jarred Katz, Kristina Goetz, and Elizabeth Maze. You are all amazing! </p>
+
+<p>A final thank you to our donors: Pagliacci, Uber, Siff, Zipcar, Capitol Hill Block Party, Lost Lake Café, 5 Point, Il Corvo Pasta, 206 Inc., World Famous, Ethan Stowell Restaurants, Seattle Road Dog Brewery Tours, Onto Entertainment, Billy O’Neill, Seattle Theatre Group, Theo Chocolate, EMP, Big Mario’s Pizza, Caffe Vita, Votiv, Sub Pop, Xbox, The Stranger, Eric Dunham, Jason Lajeunesse, and Seattle Food Tours. Your impact on ADFTK was immense, and helped make the raffles and auctions the great times that they were! Thank you for your support and making our event the best it can be!</p>
+
+<p>Cheers to another year of “A Drink For The Kids”!
+</p> Read the full post <a href="http://theveraproject.org/blog/detail/a_huge_drink_for_the_kids_thank_you1/">HERE.</a>
+<div id="clear"></div>
+</div>
+
+<div class="blogEntry">
+<div class="EntryTitle"><a href="http://theveraproject.org/blog/detail/odesza_at_sasquatch/">Odesza at Sasquatch</a></div>
+<div class="EntryDate">06.21.2013</div><p>The line up at the Sasquatch Music Festival reveals a prominent theme in current Northwest music. Heavily electronic artists and fewer traditional rock-band set ups filled all the stages this year, not just the “dance tent”. Even in this atmosphere Odesza stands out for their irresistibly movable grooves and innovative mixes. </p>
+
+<p><img src="http://i41.tinypic.com/k3adqb.jpg" />
+</p> Read the full post <a href="http://theveraproject.org/blog/detail/odesza_at_sasquatch/">HERE.</a>
+<div id="clear"></div>
+</div>
+
+<div class="blogEntry">
+<div class="EntryTitle"><a href="http://theveraproject.org/blog/detail/a_drink_for_the_kids_20131/">A Drink for the Kids 2013!</a></div>
+<div class="EntryDate">06.10.2013</div><p><img src="http://i42.tinypic.com/mcg9dl.png"/></p>
+
+<p>Join us for the Best Week of the Summer! The week of June 22nd marks the beginning of our annual 21+ fundraiser: <a href="https://www.facebook.com/events/479136668831782/?ref=notif&amp;notif_t=plan_user_joined" title="A Drink for the Kids!">A Drink for the Kids!</a> Come celebrate with us at some of the hottest destination bars throughout the Seattle area while the nights are the longest and summer is in full swing. We can&#8217;t think of a better way to get people together to show their support for Vera!</p>
+
+<p>The festivities begin on Saturday June 22nd at Moe Bar and will feature posters for Capitol Hill Block Party&#8217;s main stage as well Vera stage. The viewing experience will offer an opportunity for spectators to gander at the good we do here! Make sure you have a drink in hand!</p>
+
+<p>Our liquor sponsor will be <a href="http://www.ooladistillery.com/" title="OOLA Distillery">OOLA Distillery</a>, located on Capitol Hill, and beer will be sponsored by <a href="http://ninkasibrewing.com/" title="Ninkasi Brewing Company">Ninkasi Brewing Company</a>, who have both graciously donated their delicious products for our benefit&#8212;you&#8217;ll have to try both! When you buy any OOLA liquor or Ninkasi beer at the bars below, all proceeds go directly to The Vera Project. Think you can drink for a good cause? Choose a night (or two or three), bring friends, drink OOLA and Ninkasi, and support your favorite all-ages music venue!</p>
+
+<p>Saturday June 22 | <a href="https://www.facebook.com/events/421579244605946/" title="Moe Bar">Moe Bar</a> | Capitol Hill [feat. Capitol Hill Block Party Poster Show]</p>
+
+<p>Sunday June 23 | <a href="https://www.facebook.com/events/200598456756523/" title="Tavern Law">Tavern Law</a> | Capitol Hill</p>
+
+<p>Monday June 24 | <a href="https://www.facebook.com/events/572392119480219/" title="Cha Cha">Cha Cha</a> | Capitol Hill</p>
+
+<p>Tuesday June 25 | <a href="https://www.facebook.com/events/562242993827846/" title="Pony">Pony</a> | Capitol Hill [feat. GGNZLA Karaoke]</p>
+
+<p>Wednesday June 26 | <a href="https://www.facebook.com/events/323135417820348/" title="Neighbor Lady">Neighbor Lady</a> | Central District</p>
+
+<p>Thursday June 27 | <a href="https://www.facebook.com/events/537207786315801/" title="Linda's">Linda&#8217;s</a> | Capitol Hill</p>
+
+<p>Friday June 28 | <a href="https://www.facebook.com/events/432613120179679/" title="Redwood ">Redwood </a>| Capitol Hill</p>
+
+<p>Saturday June 29 | <a href="https://www.facebook.com/events/469169649828266/" title="Tin Hat">Tin Hat</a> | Ballard</p>
+
+<p>Come to one, or better yet, come to them all! 
+</p> Read the full post <a href="http://theveraproject.org/blog/detail/a_drink_for_the_kids_20131/">HERE.</a>
+<div id="clear"></div>
+</div>
+
+<div class="blogEntry">
+<div class="EntryTitle"><a href="http://theveraproject.org/blog/detail/sasquatch_recap1/">Sasquatch Recap</a></div>
+<div class="EntryDate">05.30.2013</div><p>The Vera Project has completed yet another successful Sasquatch Festival, and after a couple of days of recovery, volunteers take a moment to reflect on what made this year so special. One silkscreen volunteer recollects her highlights from the weekend: </p>
+
+<p><img src="http://i39.tinypic.com/2usvibs.jpg" /></p>
+
+ Read the full post <a href="http://theveraproject.org/blog/detail/sasquatch_recap1/">HERE.</a>
+<div id="clear"></div>
+</div>
+
+
+</div>
+</div>
+
+<div id="HomeRightCol">
+<head>
+<style type="text/css">
+.style1 {
+	font-family: "Futura LT Medium";
+	font-size: small;
+}
+</style>
+</head>
+<div id="coltitles">calendar</div>
+<a href="http://theveraproject.org/calendar/"><img src="http://theveraproject.org/images/b_calendar.jpg" alt="Calendar" width="200" height="50" border="0" /></a>
+<p class="signupText">Check dates for shows, gallery openings, classes, workshops, meetings, orientations, and silkscreening.</p>
+<div id="coltitles">register for classes</div>
+<a href="http://theveraproject.org/class_registration/" target="_blank"><img src="http://theveraproject.org/images/class_registration_button.gif" alt="Register here for classes!" width="201" height="119" border="0" /></a>
+<p class="signupText">*NEW! Register online for any of our upcoming classes.*</p>
+<br>
+	  <HR WIDTH="75%"> </TD>
+</TR>
+<div id="coltitles">signup</div>
+<a href="http://www.mailermailer.com/x?oid=1002863t" target="_blank"><img src="http://theveraproject.org/images/b_signup.jpg" alt="Newsletter Signup" width="200" height="50" border="0" /></a>
+<p class="signupText">Want to get updates about upcoming Vera concerts? Sign up here for our weekly mailing list.</p>
+<br>
+<br>
+<div id="coltitles">rent vera</div>
+<a href="http://theveraproject.org/about/rentvera/"><img src="http://theveraproject.org/images/rental_button.gif" alt="Host your event at VERA" class="sidebarPromo" width="201" height="119" border="0" /></a>
+<div id="clear"></div>
+
+</div>
+
+<div id="clear"></div>
+<!--begin #footer nav-->
+                  <div id="footerNav">
+                    <ul id="btnsFooter">
+                      <li id="btnFooter1"><a href="http://theveraproject.org/donate/">donate</a></li>
+                      <li id="btnFooter2"><a href="http://theveraproject.org/shows/">shows</a></li>
+                      <li id="btnFooter3"><a href="http://theveraproject.org/getinvolved/">get involved</a></li>
+                      <li id="btnFooter4"><a href="http://theveraproject.org/silkscreen/">silkscreen</a></li>
+                      <li id="btnFooter5"><a href="http://theveraproject.org/audioprogram/">audio program</a></li>
+                      <li id="btnFooter6"><a href="http://theveraproject.org/artgallery/">art gallery</a></li>
+                      <li id="btnFooter7"><a href="http://theveraproject.org/classes/">classes</a></li>
+                      <li id="btnFooter8"><a href="http://theveraproject.org/blog/">blog</a></li>
+                      <li id="btnFooter9"><a href="http://theveraproject.org/about/">about</a></li>
+                      <li id="btnFooter10"><a href="http://theveraproject.org/store/">store</a></li>
+                      <li id="btnFooter11"><a href="http://theveraproject.org/contact/">contact</a></li>
+                    </ul>
+                  </div>
+<!--/end/ #footer nav -->
+</div>
+<!--begin #social nav-->
+                  <div id="socialNav">
+                    <ul id="socIcons">
+                      <li id="socIcon1"><a href="https://www.facebook.com/pages/The-Vera-Project/336116096470972" target="_blank">facebook</a></li>
+                      <li id="socIcon2"><a href="http://www.myspace.com/veraproject" target="_blank">myspace</a></li>
+                      <li id="socIcon3"><a href="http://www.twitter.com/veraproject" target="_blank">twitter</a></li>
+                      <li id="socIcon4"><a href="http://www.flickr.com/photos/7747571@N02/" target="_blank">flickr</a></li>
+                      <li id="socIcon5"><a href="http://www.youtube.com/user/veraprojectseattle" target="_blank">youtube</a></li>
+                    </ul>
+                  </div>
+<!--/end/ #social nav -->
+<div id="footAddress">The Vera Project <font color="#f06">&nbsp;&bull;&nbsp;</font> MAILING ADDRESS: 305 Harrison Street <font color="#f06">&nbsp;&bull;&nbsp;</font> Seattle, WA 98109 <font color="#f06">&nbsp;&bull;&nbsp;</font> 206.956.8372 <font color="#f06">&nbsp;&bull;&nbsp;</font> PHYSICAL LOCATION: <a href="http://maps.google.com/maps?q=The+Vera+Project,+warren+ave+n,+Seattle+WA&hl=en&sll=47.6233,-122.35413&sspn=0.020479,0.043645&vpsrc=0&gl=us&hnear=The+Vera+Project,+Warren+Ave+N,+Seattle,+King,+Washington+98109&t=m&z=15" target="_blank">View Map</a></div>
+</div>
+</div>
+
+</body>
+</html>
