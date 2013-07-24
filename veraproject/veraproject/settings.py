@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'header',
     'footer',
     'buttons',
+    'zinnia'
 
 )
 
