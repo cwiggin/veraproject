@@ -3,3 +3,5 @@ src
 venv/*
 *.pyc
 .DS_Store
+
+veraproject/veraproject/urls.py
