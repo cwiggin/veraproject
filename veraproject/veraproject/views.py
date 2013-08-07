@@ -27,4 +27,7 @@ def shows(request):
 
 	print shows[0].date
 
+	template_values = {}
+	template_values["shows"] = shows
+
 	return render(request, 'shows.html', template_values)

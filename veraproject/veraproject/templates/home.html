@@ -11,7 +11,11 @@
   <body>
           <div id="wrapper">
           <div id="header">
-          <div id="headerLeft"><a href="http://theveraproject.org/home/"><img src="http://theveraproject.org/images/logo.gif" alt="The VERA Project" width="658" height="90" border="0" /></a></div>
+
+          {% url 'veraproject.views.home' as homebutton %}
+          <div id="headerLeft"><a href="{{ homebutton }}">{{ homebutton }}><img src="http://theveraproject.org/images/logo.gif" alt="The VERA Project" width="658" height="90" border="0"></a></div>
+          
+
           <div id="headerRight">
                <div id="topbar_search">
           <form method="post" action="http://theveraproject.org/"  >
@@ -42,7 +46,10 @@
                             <div id="nav">
                               <ul id="buttons">
                                 <li id="button1"><a href="http://theveraproject.org/donate/">donate</a></li>
-                                <li id="button2"><a href="http://theveraproject.org/shows/">shows</a></li>
+
+                                {% url 'veraproject.views.shows' as the_url %}
+                                <li id="button2"><a href="{{ the_url }}">{{ the_url }}</a></li>
+                              
                                 <li id="button3"><a href="http://theveraproject.org/getinvolved/">get involved</a></li>
                                 <li id="button4"><a href="http://theveraproject.org/silkscreen/">silkscreen</a></li>
                                 <li id="button5"><a href="http://theveraproject.org/audioprogram/">audio program</a></li>
@@ -104,7 +111,8 @@
               {% endfor %}
 
             </div>
-          </div>
+          </div>l
+          s
 
 
 
@@ -143,7 +151,10 @@
                             <div id="footerNav">
                               <ul id="btnsFooter">
                                 <li id="btnFooter1"><a href="http://theveraproject.org/donate/">donate</a></li>
-                                <li id="btnFooter2"><a href="http://theveraproject.org/shows/">shows</a></li>
+                                
+                                {% url 'veraproject.views.shows' as the_url %}
+                                <li id="button2"><a href="{{ the_url }}">{{ the_url }}</a></li>
+                                
                                 <li id="btnFooter3"><a href="http://theveraproject.org/getinvolved/">get involved</a></li>
                                 <li id="btnFooter4"><a href="http://theveraproject.org/silkscreen/">silkscreen</a></li>
                                 <li id="btnFooter5"><a href="http://theveraproject.org/audioprogram/">audio program</a></li>

@@ -7,14 +7,13 @@ admin.autodiscover()
 import zinnia
 
 urlpatterns = patterns('',
-    # Examples:
+    
      url(r'^$', 'veraproject.views.home', name='home'),
-     #url(r'^veraproject/', include('veraproject.foo.urls')),
+     url(r'^shows/$', 'veraproject.views.shows', name='shows'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 )
 

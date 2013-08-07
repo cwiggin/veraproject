@@ -11,13 +11,16 @@
 <body>
 <div id="wrapper">
 <div id="header">
-<div id="headerLeft"><a href="http://theveraproject.org/home/"><img src="http://theveraproject.org/images/logo.gif" alt="The VERA Project" width="658" height="90" border="0" /></a></div>
+
+{% url 'veraproject.views.home' as homebutton %}
+<div id="headerLeft"><a href="{{ homebutton }}">{{ homebutton }}<img src="http://theveraproject.org/images/logo.gif" alt="The VERA Project" width="658" height="90" border="0"></a></div>
+
 <div id="headerRight">
      <div id="topbar_search">
 <form method="post" action="http://theveraproject.org/"  >
 <div class='hiddenFields'>
 <input type="hidden" name="ACT" value="19" />
-<input type="hidden" name="XID" value="06c7370410f23239fcec6c8fe3755ca746efd9b9" />
+<input type="hidden" name="XID" value="16a02473bcf064099b9b625776c4beb280b1afd4" />
 <input type="hidden" name="RP" value="search&amp;#47;results" />
 <input type="hidden" name="NRP" value="" />
 <input type="hidden" name="RES" value="" />
@@ -30,10 +33,10 @@
 </div>
 
    
-			<form class="top-search">
-				<input class="top-search" value="SEARCH" onBlur="if (this.value == ''){this.value = 'SEARCH'; this.style.color='#666666';}" onFocus="if (this.value == 'SEARCH') {this.value = ''; this.style.color='#666666';}" type="text" name="keywords" id="keywords" />
-				<input type="submit" class="search-submit" value="submit" /><br clear="all" />
-			</form>
+      <form class="top-search">
+        <input class="top-search" value="SEARCH" onBlur="if (this.value == ''){this.value = 'SEARCH'; this.style.color='#666666';}" onFocus="if (this.value == 'SEARCH') {this.value = ''; this.style.color='#666666';}" type="text" name="keywords" id="keywords" />
+        <input type="submit" class="search-submit" value="submit" /><br clear="all" />
+      </form>
 </form>
     </div>
 
@@ -42,7 +45,10 @@
                   <div id="nav">
                     <ul id="buttons">
                       <li id="button1"><a href="http://theveraproject.org/donate/">donate</a></li>
-                      <li id="button2"><a href="http://theveraproject.org/shows/" id="on">shows</a></li>
+                      
+                      {% url 'veraproject.views.shows' as the_url %}
+                      <li id="button2"><a href="{{ the_url }}">{{ the_url }}</a></li>
+
                       <li id="button3"><a href="http://theveraproject.org/getinvolved/">get involved</a></li>
                       <li id="button4"><a href="http://theveraproject.org/silkscreen/">silkscreen</a></li>
                       <li id="button5"><a href="http://theveraproject.org/audioprogram/">audio program</a></li>
@@ -75,265 +81,32 @@ UPCOMING SHOWS
 <div><img src="http://theveraproject.org/images/media_shows.jpg" alt="The Vera Project" width="900" height="390" /></div>
 <div><img src="http://theveraproject.org/images/divider_horiz.gif" alt="divider" class="divHoriz" width="900" height="2" /></div>
 
+
+
 <div id="ShowsLeftCol">
 <div class="rightBorder">
 <img src="http://theveraproject.org/images/title_upcomingEvents.gif" alt="Upcoming Events" class="HomeLeftTitle" width="144" height="12" />
 
-<div id="ShowsDates">   
+            {% for show in shows %}
+            <div class="showBox-gray">                         
+            <div class="show-description">     
+            <div style="clear:both">
+             <li><div class="event-date">
+             <div class="event-month">{{show.date|date:"M" }}</div>
+             <div class="event-day">{{show.date|date:"d" }}</div>                          
+              <div class="event-info">{{show.name}}
+              <a href="{{show.ticketurl}}" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
+             </div>
+             </li>
+
+            </div>
+            </div>
+            </div>
+
+            {% endfor %}
 
 
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">July</div>
-					<div class="show-day">24</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>The Exceptionally Ordinary Tour</p>
-					<p>Raven Zoe, Todd Williams, This Winter  </p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1722016" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
 
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">JUL</div>
-					<div class="show-day">26</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Capitol Hill Block Party: Vera Stage</p>
-					<p>Bleached, White Lung, The Intelligence, Waxahatchee</p></div>
-			 <div class="show-tix"><a href="http://capitolhillblockparty.strangertickets.com/" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">JUL</div>
-					<div class="show-day">26</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Tallhart</p>
-					<p>From Indian Lakes, Makeshift Prodigy</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1723267" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">JUL</div>
-					<div class="show-day">27</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Capitol Hill Block Party: Vera Stage</p>
-					<p>Doldrums, Wild Cub, Onuinu, Naomi Punk, Vox Mod</p></div>
-			 <div class="show-tix"><a href="http://capitolhillblockparty.strangertickets.com/" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">JUL</div>
-					<div class="show-day">28</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Capitol Hill Block Party: Vera Stage</p>
-					<p>Ravenna Woods with the Seattle Rock Orchestra, Sam Lachow & Raz Simone, Jarv Dee</p></div>
-			 <div class="show-tix"><a href="http://capitolhillblockparty.strangertickets.com/" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">JUL</div>
-					<div class="show-day">31</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>The Ghost Inside</p>
-					<p>Xibalaba Reign Supreme Relentless Beartooth, Prestige</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1740025" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">AUG</div>
-					<div class="show-day">13</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Senor Fin</p>
-					<p>Song Sparrow Research, Lady the Beard</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1742618 " target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">AUG</div>
-					<div class="show-day">17</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Erik Blood </p>
-					<p>Western Haunts Album Release, Jason Dodson of The Maldives</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/homePageSearch.do?method=showPerformanceDetail&performance_id=1722119&search_source=etix" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">AUG</div>
-					<div class="show-day">20</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>No Age at Washington Hall</p>
-					<p>Devin Gary & Ross, Sun Foot, Naomi Punk</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1728189" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">AUG</div>
-					<div class="show-day">23</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Little Comets</p>
-					<p>Plus Guests</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1737836" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">AUG</div>
-					<div class="show-day">24</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Waxwing</p>
-					<p>Reunion Show</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1716846" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">AUG</div>
-					<div class="show-day">25</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Plow United</p>
-					<p>Smokejumper</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1742552" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">AUG</div>
-					<div class="show-day">26</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>WHIRR</p>
-					<p>Nothing, Vibragun, Nostalgist</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1741098 " target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">SEP</div>
-					<div class="show-day">14</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Parachute</p>
-					<p>Matt Hires, Paradise Fears</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1741247 " target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">SEP</div>
-					<div class="show-day">20</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Islands</p>
-					<p>Plus Guests</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1741554" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">OCT</div>
-					<div class="show-day">17</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Ghost Town</p>
-					<p>Her Bright Skies, Modern Day Escape, Oh No Fiasco</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1743414" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">NOV</div>
-					<div class="show-day">02</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>SoMo</p>
-					<p>Plus Guests</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1742217" target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-
-       <div class="show-entry">
-       <div class="show-date">
-					<div class="show-month">NOV</div>
-					<div class="show-day">09</div>
-					</div>
-			 <div class="showBox-gray">													
-       <div class="show-description">
-					<p>Fossil Collective</p>
-					<p>Jamestown Revival</p></div>
-			 <div class="show-tix"><a href="http://www.etix.com/ticket/online/performanceSearch.jsp?performance_id=1742614 " target="_blank"><img src="http://theveraproject.org/images/b_tickets.gif" alt="Tickets" width="61" height="16" border="0" /></a></div>
-			 <div style="clear:both"></div>
-			 </div></div>
-
-</div>	
 </div>
 </div>
 
@@ -441,7 +214,8 @@ UPCOMING SHOWS
                   <div id="footerNav">
                     <ul id="btnsFooter">
                       <li id="btnFooter1"><a href="http://theveraproject.org/donate/">donate</a></li>
-                      <li id="btnFooter2"><a href="http://theveraproject.org/shows/" id="on">shows</a></li>
+                      {% url 'veraproject.views.shows' as the_url %}
+                      <li id="button2"><a href="{{ the_url }}">{{ the_url }}</a></li>
                       <li id="btnFooter3"><a href="http://theveraproject.org/getinvolved/">get involved</a></li>
                       <li id="btnFooter4"><a href="http://theveraproject.org/silkscreen/">silkscreen</a></li>
                       <li id="btnFooter5"><a href="http://theveraproject.org/audioprogram/">audio program</a></li>
