@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class preres(models.Model):
+	bandnamelink = models.CharField(max_length=1000)
+	reviewerblurb = models.CharField(max_length=200)

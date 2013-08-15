@@ -110,6 +110,13 @@ UPCOMING SHOWS
 </div>
 </div>
 
+
+
+
+
+
+
+
 <div id="ShowsRightCol">
 <div id="coltitles">signup</div>
 <a href="http://www.mailermailer.com/x?oid=1002863t" target="_blank"><img src="http://theveraproject.org/images/b_signup.jpg" alt="Newsletter Signup" width="200" height="50" border="0" /></a>
@@ -121,6 +128,14 @@ UPCOMING SHOWS
 <p class="signupText">Check dates for shows, gallery openings, classes, workshops, meetings, orientations, and silkscreening.</p>
 <br>
 <br>
+
+
+
+
+
+
+
+{% for prere in preres %}
 
 <img src="http://theveraproject.org/images/title_showPreRev.gif" alt="Show Previews & Reviews" class="titleRightCol" width="209" height="12" />
 
@@ -202,6 +217,8 @@ UPCOMING SHOWS
 <p><a href="http://theveraproject.org/shows/review_detail/why/">Why?</a><br /><em>Sound On The Sound Review</em></p>
 
 <p><a href="http://theveraproject.org/shows/review_detail/dan_deacon/">Dan Deacon</a><br /><em>Three Imaginary Girls Review</em></p>
+
+{% endfor %}
 
 
 <a href="http://theveraproject.org/shows/previews/"><img src="http://theveraproject.org/images/b_previews.gif" alt="Previews" class="inlineBtn" width="92" height="19" border="0" /></a>
