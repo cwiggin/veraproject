@@ -31,3 +31,9 @@ def shows(request):
 	template_values["shows"] = shows
 
 	return render(request, 'shows.html', template_values)
+
+
+def prere(request):
+	prere = preres.objects.all()
+
+	print prere[0].
